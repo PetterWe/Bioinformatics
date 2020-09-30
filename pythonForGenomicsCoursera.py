@@ -4,7 +4,7 @@ import numpy
 import sys
 
 try:
-    f = open(r"C:\Users\pette\Documents\Python\dna2.fasta")
+    f = open(r"C:\x\y\z\Python\dna.fasta")
 except IOError:
     print("oops wrong location!")
 
@@ -35,7 +35,7 @@ print("\n")
 print("How long are the sequences?")
 from Bio import SeqIO
 full_seq=[]
-for seq_record in SeqIO.parse(r"C:\Users\pette\Documents\Python\dna2.fasta", "fasta"):
+for seq_record in SeqIO.parse(r"C:\x\y\z\Python\dna.fasta", "fasta"):
     full_seq.append([seq_record.id, str(seq_record.seq), len(seq_record)])
     print("Length of record",seq_record.id)
     print(len(seq_record))
@@ -66,7 +66,7 @@ def find_ORF(sequence, read_frame):
 original_stdout = sys.stdout
 
 
-for seq_record in SeqIO.parse(r"C:\Users\pette\Documents\Python\dna2.fasta", "fasta"):
+for seq_record in SeqIO.parse(r"C:\x\y\z\Python\dna.fasta", "fasta"):
     with open(r"C:\Users\pette\Documents\Python\orfs.txt","a") as f:
         sys.stdout = f
         print(seq_record.id, file=f)
@@ -92,7 +92,7 @@ def get_repeated_strings(input_string, min_str_length, calculate_largest_repeate
     counted_final_candidates = {item: counted_substrings[item] for item in not_counted_final_candidates}
     print(counted_final_candidates)
 
-for seq_record in SeqIO.parse(r"C:\Users\pette\Documents\Python\dna2.fasta", "fasta"):
+for seq_record in SeqIO.parse(r"C:\x\y\z\Python\dna.fasta", "fasta"):
     with open(r"C:\Users\pette\Documents\Python\repeats.txt","a") as f:
         sys.stdout = f
         print(seq_record.id, file=f)
