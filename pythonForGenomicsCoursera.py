@@ -67,7 +67,7 @@ original_stdout = sys.stdout
 
 
 for seq_record in SeqIO.parse(r"C:\x\y\z\Python\dna.fasta", "fasta"):
-    with open(r"C:\Users\pette\Documents\Python\orfs.txt","a") as f:
+    with open(r"C:\x\y\z\Python\orfs.txt","a") as f:
         sys.stdout = f
         print(seq_record.id, file=f)
         sequence=str(seq_record.seq)
@@ -93,7 +93,7 @@ def get_repeated_strings(input_string, min_str_length, calculate_largest_repeate
     print(counted_final_candidates)
 
 for seq_record in SeqIO.parse(r"C:\x\y\z\Python\dna.fasta", "fasta"):
-    with open(r"C:\Users\pette\Documents\Python\repeats.txt","a") as f:
+    with open(r"C:\x\y\z\Python\repeats.txt","a") as f:
         sys.stdout = f
         print(seq_record.id, file=f)
         sequence=str(seq_record.seq)
